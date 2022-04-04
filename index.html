@@ -13,9 +13,34 @@
 <body>
     <div class="fechar-pedido">
         <div class="fechar-pedido-verde">
-            <h5>Hamburguer de coco</h5>
-            <button class="finalizar">Finalizar pedido</button>
-            <button class="cancelar" onclick="">Cancelar</button>
+            <div class="conteudo-fechar-pedido">
+                <h7>Confirme o seu pedido</h7>
+                <div class="lista-produtos cancelar">
+                    <div class="lista-produto-linha">
+                        <p class="descricao" id="d1">.</p>
+                        <p class="descricao negrito" id="p1">.</p>
+                    </div>
+                    <div class="lista-produto-linha">
+                        <p class="descricao" id="d2">.</p>
+                        <p class="descricao negrito" id="p2">.</p>
+                    </div>
+                    <div class="lista-produto-linha">
+                        <p class="descricao" id="d3">.</p>
+                        <p class="descricao negrito" id="p3">.</p>
+                    </div>
+                    <div class="lista-produto-linha">
+                        <p class="totalD" id="d4">TOTAL.: </p>
+                        <p class="totalD" id="p4">.</p>
+                    </div>
+                    <input type="text" name="nome" id="nomeId" placeholder="Qual o seu nome?">
+                    <input type="text" name="endereco" id="enderecoId" placeholder="Qual o seu endereço?">
+
+
+                </div>
+                 <button class="finalizar mouse-link" onclick="finalizarPedido()">Tudo certo, finalizar pedido</button>
+                 <button class="cancelar mouse-link" onclick="cancelaPedido()">Cancelar</button>
+
+            </div><p>
             
         </div>
     </div>
@@ -274,7 +299,7 @@
 
 
     <div class="footer">
-        <button id="botao" class="button-buy tittle-button" onclick="botaoCompra()"><p>Selecione os 3 itens <br> para fechar o pedido</p></button>
+        <button id="botao" class="button-buy tittle-button" onclick="botaoCompra(99)"><p>Selecione os 3 itens <br> para fechar o pedido</p></button>
 
     </div>
 

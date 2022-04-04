@@ -286,6 +286,7 @@ input{
     border: 3px solid green;
 }
 .icone-div{
+    display: none;
     margin-left: 60px;
     font-size: 24px;
     color: #fafafa;

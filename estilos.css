@@ -88,6 +88,7 @@ input{
     font-size: 18px;
     font-weight: bold;
     color: white;
+    
 }
 .finalizar{
     border: none;
@@ -100,10 +101,25 @@ input{
     background-color: white;
 
 }
+.finalizar:hover{
+    background-color: #f9f9f9;
+    color: darkgreen;
+}
+.cancelar:hover{
+    color:rgba(0,0,0, 0.9);
+}
+.lista-produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 .lista-produto-linha{
     width: 300px;
     height: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -276,7 +292,15 @@ input{
     font-size: 40px;
     color: green;
 }
+.button-buy-ok:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+.button-buy-ok:hover{
 
+    background-color: darkgreen;
+}
 .button-buy{
     border-radius: 30px;
     width: 364px;

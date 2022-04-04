@@ -60,7 +60,6 @@ function cancelaPedido(){
     if (decisao == true){
         const cancelaPedido = document.querySelector(".fechar-pedido");
         cancelaPedido.classList.add("desaparecer"); 
-        alert ("Seu carrinho esta sendo esvaziado...");
         location.reload();
     } 
 }

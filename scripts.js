@@ -89,7 +89,7 @@ function botaoCompra(elemento){
             
             valorTotal = Number.parseFloat(precoPrato) + Number.parseFloat(precoBebida) + Number.parseFloat(precoSobremesa)
             const total = document.getElementById("p4").innerHTML = ("R$ ") + valorTotal.toFixed(2);
-            console.log(prato, bebida, sobreme);
+            
     
         }
         } else if (contador == 0){
@@ -99,9 +99,34 @@ function botaoCompra(elemento){
 }
 
 function finalizarPedido(){
-
+    let aux = 2;
     const nome = document.getElementById("nomeId").value;
     const endereco = document.getElementById("enderecoId").value;
+
+    if (nome == 0){
+        alert("Preciso do seu nome para anotar no pedido");
+        aux -= 1;
+    }
+    if (endereco == 0){
+        alert("Preciso do seu endereco para o motoboy entregar...");
+        aux -= 1;
+    }
+    if (aux == 2 ){
+        
+        const uri = `Olá gostaria de fazer um pedido: \n
+      - Prato : ${document.querySelector(".selecionado h5").innerHTML} \n
+      - Bebida : ${document.querySelector(".selecionado-bebida h5").innerHTML} \n
+      - Sobremesa : ${document.querySelector(".selecionado-sobremesa h5").innerHTML} \n\n
     
+      TOTAL : R$ ${valorTotal.toFixed(2)} \n
+    
+      Cliente : ${nome} \n
+      Endereço : ${endereco}
+      `
+      const uriEncoded = encodeURIComponent(uri);
+      window.open(`https://wa.me/+5518997712016?text=${uriEncoded}`, '_blank');
+    }else{
+        console.log("Esta faltando dados amigo, me ajuda a te ajudar.")
+    }
 
 }

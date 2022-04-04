@@ -1,4 +1,9 @@
 let contador = 0;
+let precoPrato = 0;
+let precoBebida = 0;
+let precoSobremesa = 0;
+
+let valorTotal = 0;
 
 function prato(elemento){
 
@@ -11,7 +16,9 @@ function prato(elemento){
         elemento.classList.add("selecionado");
         contador++;
     }
-   botaoCompra();
+    precoPrato = document.querySelector(".selecionado span").innerHTML.replace(",",".");
+
+    botaoCompra();
 }
 
 
@@ -26,6 +33,7 @@ function bebida(elemento){
         elemento.classList.add("selecionado-bebida");
         contador++;
     }
+    precoBebida = document.querySelector(".selecionado-bebida span").innerHTML.replace(",",".")
    botaoCompra();
     
 
@@ -41,17 +49,24 @@ function sobremesa(elemento){
         elemento.classList.add("selecionado-sobremesa");
         contador++;
     }
+    precoSobremesa = document.querySelector(".selecionado-sobremesa span").innerHTML.replace(",",".")
    botaoCompra();
 
 }
 
 function botaoCompra(){
-    
 
     if(contador === 3){
         const confirmacao = document.querySelector(".button-buy");
         confirmacao.classList.add("button-buy-ok"); 
         document.getElementById("botao").innerHTML="Fechar pedido";
 
-    }
+        const finalizarCompra = document.querySelector(".fechar-pedido");
+        finalizarCompra.classList.add("aparecer"); 
+
+        valorTotal = Number.parseFloat(precoPrato) + Number.parseFloat(precoBebida) + Number.parseFloat(precoSobremesa)
+        console.log(valorTotal);
+    } else if (contador == 0){
+        alert("Por gentileza selecione 3 itens para prosseguir com sua compra...");
+    } 
 }

@@ -30,7 +30,34 @@ span {
     font-family: 'Roboto';
     font-size: 16px;
     color: #000;
+    margin-left: 5px;
 }
+.fechar-pedido{
+    background-color: rgba(500, 500, 500, 0.75);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    position: fixed;
+    z-index: 2;
+}
+.aparecer{
+    display: flex;
+}
+.fechar-pedido-verde{
+    width: 40%;
+    height: 50%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lightgreen;
+}
+
 
 .header{
     width: 100%;
@@ -157,9 +184,13 @@ span {
 }
 
 .footer-product{
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #000;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    
+    
 }
 .selecionado{
     border: 3px solid green;

@@ -26,6 +26,11 @@ h6{
     font-weight: 100;
     color: #a6a6a6;
 }
+span {
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #000;
+}
 
 .header{
     width: 100%;
@@ -115,6 +120,33 @@ h6{
     justify-content: center;
 }
 
+.product-drink{
+    background-color: #fafafa;
+    width: 172px;
+    height: 216px;
+    border-radius: 10px;    
+    margin-right:  20px;
+
+    box-sizing: border-box;
+    padding: 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.product-sobremesa{
+    background-color: #fafafa;
+    width: 172px;
+    height: 216px;
+    border-radius: 10px;    
+    margin-right:  20px;
+
+    box-sizing: border-box;
+    padding: 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .product-content{
     width: 144px;
     
@@ -131,14 +163,20 @@ h6{
 }
 .selecionado{
     border: 3px solid green;
-    
+}
+.selecionado-bebida{
+    border: 3px solid green;
+}
+.selecionado-sobremesa{
+    border: 3px solid green;
 }
 .icon-select{
     font-size: 24px;
     color: #fafafa;
     display: inline;
 }
-.icone-ligado{
+.icone-selecionado{
+    font-size: 40px;
     color: green;
 }
 
@@ -151,6 +189,10 @@ h6{
     color: #cbcbcb;
     cursor: not-allowed; 
 }
+.button-buy-ok{
+    background-color: green;
+    cursor: pointer; 
+}
 
 /* INICIO DOS ESTILOS */
 
@@ -159,11 +201,6 @@ h6{
     font-size: 20px;
 }
 
-.price-product{
-    font-family: 'Roboto';
-    font-size: 16px;
-    color: #000;
-}
 .mouse-link{
     cursor: pointer;
 }

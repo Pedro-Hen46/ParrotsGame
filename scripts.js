@@ -1,24 +1,57 @@
-let qtdSelecionada = 0;
+let contador = 0;
+
 function prato(elemento){
 
-    const pratoClicado = document.querySelector(".product");
-    if (pratoClicado !== null){
-        elemento.classList.toggle("selecionado");
-        
+    const pratoSelecionado = document.querySelector(".selecionado");   
+    
+    if (pratoSelecionado !== null) {
+        pratoSelecionado.classList.remove("selecionado"); 
+        elemento.classList.add("selecionado"); 
     } else {
-        elemento.classList.remove("selecionado");
+        elemento.classList.add("selecionado");
+        contador++;
     }
+   botaoCompra();
+}
+
+
+function bebida(elemento){
+
+    const bebidaSelecionada = document.querySelector(".selecionado-bebida"); //Procurando elemento selecionado
+     
+    if (bebidaSelecionada !== null) {
+        bebidaSelecionada.classList.remove("selecionado-bebida"); 
+        elemento.classList.add("selecionado-bebida"); 
+    } else {
+        elemento.classList.add("selecionado-bebida");
+        contador++;
+    }
+   botaoCompra();
     
-    const iconeClicado = document.querySelector(".icon-select");
-    iconeClicado.classList.toggle("icone-ligado");
+
+}
+function sobremesa(elemento){
     
-    qtdSelecionada += 1;
+    const sobremesaSelecionada = document.querySelector(".selecionado-sobremesa"); //Procurando elemento selecionado
+    
+    if (sobremesaSelecionada !== null) {
+        sobremesaSelecionada.classList.remove("selecionado-sobremesa"); 
+        elemento.classList.add("selecionado-sobremesa"); 
+    } else {
+        elemento.classList.add("selecionado-sobremesa");
+        contador++;
+    }
+   botaoCompra();
+
 }
 
 function botaoCompra(){
     
-    if (qtdSelecionada < 3){
-        alert("Voce não selecionou todos os itens para comprar, selecione as 3 opções para finalizar o pedido.");
+
+    if(contador === 3){
+        const confirmacao = document.querySelector(".button-buy");
+        confirmacao.classList.add("button-buy-ok"); 
+        document.getElementById("botao").innerHTML="Fechar pedido";
+
     }
-    
 }

@@ -8,12 +8,17 @@ let valorTotal = 0;
 function prato(elemento){
 
     const pratoSelecionado = document.querySelector(".selecionado");   
-    
+    const check = document.querySelector(".icone-div");
+
     if (pratoSelecionado !== null) {
         pratoSelecionado.classList.remove("selecionado"); 
+        
         elemento.classList.add("selecionado"); 
+        
+        
     } else {
         elemento.classList.add("selecionado");
+        
         contador++;
     }
     precoPrato = document.querySelector(".selecionado span").innerHTML.replace(",",".");
@@ -115,12 +120,12 @@ function finalizarPedido(){
         const uri = `Olá gostaria de fazer um pedido: \n
       - Prato : ${document.querySelector(".selecionado h5").innerHTML} \n
       - Bebida : ${document.querySelector(".selecionado-bebida h5").innerHTML} \n
-      - Sobremesa : ${document.querySelector(".selecionado-sobremesa h5").innerHTML} \n\n
+      - Sobremesa : ${document.querySelector(".selecionado-sobremesa h5").innerHTML} \n
     
-      TOTAL : R$ ${valorTotal.toFixed(2)} \n
+      *TOTAL : R$ ${valorTotal.toFixed(2)}* \n
     
-      Cliente : ${nome} \n
-      Endereço : ${endereco}
+      CLIENTE : ${nome} \n
+      ENDEREÇO : ${endereco}
       `
       const uriEncoded = encodeURIComponent(uri);
       window.open(`https://wa.me/+5518997712016?text=${uriEncoded}`, '_blank');

@@ -283,13 +283,12 @@ input{
 .selecionado-sobremesa{
     border: 3px solid green;
 }
-.icon-select{
+.icone-div{
+    margin-left: 60px;
     font-size: 24px;
     color: #fafafa;
-    display: inline;
 }
-.icone-selecionado{
-    font-size: 40px;
+.icone-aparecer{
     color: green;
 }
 .button-buy-ok:active {

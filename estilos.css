@@ -27,3 +27,37 @@ h1{
     font-weight: 500;
     color: green;
 }
+.baralho{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: inline;
+    align-items: center;
+    justify-content: center;
+    width: 872px;
+    padding: 10px;
+}
+
+.cartas{
+    width: 117px;
+    height: 146px;
+    border-radius: 10px;
+    background-color: #75B79E;
+    margin:  10px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.1s linear;
+}
+.cartas:hover{
+    width: 130px;
+    height: 160px;
+    border: 2px solid greenyellow;
+    
+}
+
+.mouse-link{
+    cursor: pointer ;
+}

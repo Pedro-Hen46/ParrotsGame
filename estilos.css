@@ -12,6 +12,7 @@ h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     margin-bottom: 0px;
+    margin-top: 5px;
 }
 
 .container{
@@ -27,37 +28,69 @@ h1{
     font-weight: 500;
     color: green;
 }
+
 .baralho{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: inline;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 872px;
     padding: 10px;
 }
 
-.cartas{
+
+.memory-card{
     width: 117px;
     height: 146px;
     border-radius: 10px;
     background-color: #75B79E;
     margin:  10px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+
+    transform-style: preserve-3d;
+    transition: 0.3s;
+    position: relative;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    transition: 0.1s linear;
-}
-.cartas:hover{
-    width: 130px;
-    height: 160px;
-    border: 2px solid greenyellow;
-    
+    cursor: pointer;
 }
 
-.mouse-link{
-    cursor: pointer ;
+.front-face, .back-face{
+
+    position: absolute;
+}
+
+.back-face{
+    opacity: 1;
+    width: 100px;
+    height: 110px;
+    background-color: #75B79E;
+}
+.opaco{
+    opacity: 0;
+}
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+.front-face {
+    width: 100px;
+    height: 110px;
+    background-color: #75B79E;
+    transform: rotateY(180deg);
+   
+}
+.front-face-off{
+    opacity: 0;
+}
+
+@media (max-width:800px){
+    .baralho{
+        flex-direction: column;
+    }
+
 }

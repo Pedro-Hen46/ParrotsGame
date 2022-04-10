@@ -49,9 +49,9 @@ function controleGame(){
     //- verificar se acabou o jogo.
     if( verificaSeGanhou == qtdCartas/2){
         const decisao = prompt(`
-        🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩✅
+        🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩✅
              🎉🎊    MEUS PARABENS VOCE GANHOU!    🎉🎊 
-        🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩✅
+        🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩✅
 
         TOTAL DE MOVIMENTOS (CARTAS) : ${contadorJogadas} ✅ VEZES 
                     

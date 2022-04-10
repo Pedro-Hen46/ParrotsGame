@@ -97,10 +97,10 @@ function imprimirCartas(){
         document.querySelector(".baralho").innerHTML += `
         <div class="memory-card" data-card="${imagesCards[carta[i]]}">
             
-              <img class="front-face" src="/Projeto_04_parrotsCardGame/images/front.png" width="97px" height="106px">      
+              <img class="front-face" src="front.png" width="97px" height="106px">      
            
             
-              <img class="back-face" src="/Projeto_04_parrotsCardGame/images/${imagesCards[carta[i]]}" width="80px" height="100px">          
+              <img class="back-face" src="${imagesCards[carta[i]]}" width="80px" height="100px">          
             
         </div>`; 
    }

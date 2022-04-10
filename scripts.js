@@ -100,7 +100,7 @@ function imprimirCartas(){
               <img class="front-face" src="/Projeto_04_parrotsCardGame/images/front.png" width="97px" height="106px">      
            
             
-              <img class="back-face opaco" src="/Projeto_04_parrotsCardGame/images/${imagesCards[carta[i]]}" width="80px" height="100px">          
+              <img class="back-face" src="/Projeto_04_parrotsCardGame/images/${imagesCards[carta[i]]}" width="80px" height="100px">          
             
         </div>`; 
    }
@@ -121,39 +121,41 @@ function checkaIgualdade() {
 }
 
 const cards = document.querySelectorAll(".memory-card");
-let firstCard, secondCard, carton;
+let firstCard, secondCard, carton, cartonTwo;
 let lockCards = false;
 
 function viraAcarta() {
 
+ 
   if (lockCards) return false;
   this.classList.add("flip");
-
-  carton = this.querySelector(".back-face");
-  carton.classList.remove("opaco");
-
 
   //- Variavel para contar a quantidade de jogadas.
   contadorJogadas += 1;
 
   if (!firstCard) {
     firstCard = this;
+    carton = firstCard;
+    carton = firstCard.querySelector(".back-face");
+    carton.classList.add("opaco-off");
     return false;
   }
 
   secondCard = this;
+  cartonTwo = secondCard;
 
+  cartonTwo = cartonTwo.querySelector(".back-face");
+  cartonTwo.classList.add("opaco-off");
   checkaIgualdade();
 }
 
 function voltaAoOriginal() {
-  //const teste = this.querySelector(".back-face");
-  //console.log(teste);
   lockCards = true;
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
-    carton.classList.add("opaco");
+    carton.classList.remove("opaco-off");
+    cartonTwo.classList.remove("opaco-off");
     console.log(carton);
     resetCards();
   }, 1000);

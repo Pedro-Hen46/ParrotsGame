@@ -65,13 +65,13 @@ h1{
 }
 
 .back-face{
+    opacity: 0;
+}
+.opaco-off{
     opacity: 1;
     width: 100px;
     height: 110px;
-    background-color: #75B79E;
-}
-.opaco{
-    opacity: 0;
+    background-color: #75B79E   ;
 }
   .memory-card.flip {
     transform: rotateY(180deg);

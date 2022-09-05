@@ -1,6 +1,7 @@
-
-<div style=" display: flex; flex-direction: column; align-items: center;"><img style="height:300px;" src="./lib/images/Logo.png">Jogo da memoria desenvolvido com tecnologias vanilla, clique no link do deploy e se divirta jogando Parrots Card Game. <br /></div><br />
-
+<html>
+<body>
+<div style=" display: flex; flex-direction: column; align-items: center;"><img style="height:300px;" src="./lib/images/Logo.png"> <br /></div><br />
+Jogo da memoria desenvolvido com tecnologias vanilla, clique no link do deploy e se divirta jogando Parrots Card Game.
 
 ## Tecnologias 
 Algumas tecnologias usadas:
@@ -34,3 +35,6 @@ Alguns recursos que são encontrados no projeto:
   <br />
   Me siga no <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FPedro-Hen46" target="_blank"><strong>Github</strong> </a> e Faça uma conexão no <a href="https://github.com/pedro-Hen46/" target="_blank"><strong>LinkedIn</strong> </a>.<br/> 
   Obrigado por visitar. ❤
+
+</body>
+</html>
